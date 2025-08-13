@@ -1,0 +1,86 @@
+:root {
+  --color-bloqueado: #cfd8dc;
+  --color-desbloqueado: #b3e5fc;
+  --color-aprobado: #81d4fa;
+  --color-borde: #0288d1;
+  --color-texto: #01579b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #e1f5fe;
+  margin: 0;
+  color: var(--color-texto);
+}
+
+.topbar {
+  background: #03a9f4;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar button {
+  background: white;
+  color: var(--color-texto);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.columns {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.col {
+  flex: 0 0 auto;
+  min-width: 250px;
+}
+
+.col h2 {
+  text-align: center;
+  background: #03a9f4;
+  color: white;
+  padding: 5px;
+  margin-top: 0;
+}
+
+.curso {
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.curso:hover {
+  transform: scale(1.02);
+}
+
+.curso.bloqueado {
+  background: var(--color-bloqueado);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.curso.desbloqueado {
+  background: var(--color-desbloqueado);
+}
+
+.curso.aprobado {
+  background: var(--color-aprobado);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
